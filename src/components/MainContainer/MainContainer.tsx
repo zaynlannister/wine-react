@@ -16,7 +16,7 @@ const MainContainer = () => {
           <p>We Ship Everywhere! Free In The Us!</p>
         </div>
         <div className="w-[33%] flex justify-center">
-          <img src="src/assets/icons/logoIcon.svg" alt="logo" />
+          <img src="/assets/img/logoIcon.svg" alt="logo" />
         </div>
         <div className="w-[33%] flex justify-end">
           <a className="mr-4" href="#login">
@@ -43,7 +43,7 @@ const MainContainer = () => {
           mirgant vineyard worker and his family.
         </p>
         <div className="mt-20 w-fit mx-auto">
-          <img src="src/assets/bottles.png" alt="bottles" />
+          <img src="/assets/img/bottles.png" alt="bottles" />
         </div>
       </div>
     </div>
