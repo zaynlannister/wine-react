@@ -117,7 +117,7 @@ const ProductsContainer = () => {
         ))}
       </ProductsStyledBox>
       {products.length > visibleProducts && (
-        <div className="text-center mt-2">
+        <div className="text-center mt-4">
           <a
             onClick={() => setVisibleProducts(products.length)}
             className="custom-link custom-font text-[20px]"

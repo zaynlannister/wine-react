@@ -44,3 +44,16 @@ a:hover {
 .custom-link:hover {
   border-color: #e2b024;
 }
+
+.custom-button {
+  border: 1px solid #e2b024;
+  background-color: transparent;
+  color: #ffff;
+  padding: 12px 35px;
+  transition: 100ms all;
+}
+
+.custom-button:hover {
+  background-color: #e2b024;
+  color: #000;
+}
