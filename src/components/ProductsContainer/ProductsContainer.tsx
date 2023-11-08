@@ -1,5 +1,6 @@
 import React from "react";
 import ProductComponent from "./ProductComponent";
+import styled from "styled-components";
 
 const productsList = [
   {
@@ -68,19 +69,20 @@ const productsList = [
   },
 ];
 
-const types = ["All", "Red", "Rose", "White"];
+interface Product {
+  name: string;
+  currentPrice: number;
+  prevPrice: number;
+  type: string;
+  img: string;
+  discount: string;
+}
+
 const ProductsContainer = () => {
   const [type, setType] = React.useState("all");
-  const [products, setProducts] = React.useState<
-    {
-      name: string;
-      currentPrice: number;
-      prevPrice: number;
-      type: string;
-      img: string;
-      discount: string;
-    }[]
-  >([]);
+  const [products, setProducts] = React.useState<Product[]>([]);
+  const [visibleProducts, setVisibleProducts] = React.useState<number>(6);
+  const types = ["all", "red", "rose", "white"];
 
   const getFilteredProducts = () => {
     const filteredProducts = productsList.filter((item) => item.type === type);
@@ -98,23 +100,44 @@ const ProductsContainer = () => {
         Futured <span className="text-[#E2B024]">Products</span>
       </p>
       <div className="feature__types max-w-[300px] flex justify-between mx-auto my-4">
-        {types.map((type) => (
+        {types.map((item) => (
           <a
-            className="custom-link"
-            onClick={() => setType(type.toLowerCase())}
-            href={`#${type.toLowerCase()}`}
+            key={item}
+            className={`custom-link ${item === type ? "active" : ""}`}
+            onClick={() => setType(item.toLowerCase())}
+            href={`#${item.toLowerCase()}`}
           >
-            {type}
+            {item}
           </a>
         ))}
       </div>
-      <div className="flex justify-between flex-wrap">
-        {products.map((item, index) => (
+      <ProductsStyledBox>
+        {products.slice(0, visibleProducts).map((item, index) => (
           <ProductComponent key={index} {...item} />
         ))}
-      </div>
+      </ProductsStyledBox>
+      {products.length > visibleProducts && (
+        <div className="text-center mt-2">
+          <a
+            onClick={() => setVisibleProducts(products.length)}
+            className="custom-link custom-font text-[20px]"
+          >
+            Show more
+          </a>
+        </div>
+      )}
     </div>
   );
 };
+
+const ProductsStyledBox = styled.div`
+  display: grid;
+  --auto-grid-min-size: 300px;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 1rem;
+`;
 
 export default ProductsContainer;

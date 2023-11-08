@@ -9,7 +9,7 @@ const imageStyle: React.CSSProperties = {
 
 const ProductComponent = (props: any) => {
   return (
-    <ProductStyled className="product w-1/4 p-4 relative cursor-pointer">
+    <ProductStyled className="product p-4 relative cursor-pointer">
       <div className="absolute top-[40px] left-[17px] bg-[#E2B024] px-2 py-1">
         <p className="text-[14px] text-[#000]">{props.discount}</p>
       </div>

@@ -34,8 +34,13 @@ a:hover {
 .custom-link {
   border-bottom: 1px solid #0000;
   transition: 100ms all;
+  cursor: pointer;
+}
+
+.custom-link.active {
+  border-color: #e2b024;
 }
 
 .custom-link:hover {
-  border-bottom: 1px solid #e2b024;
+  border-color: #e2b024;
 }
