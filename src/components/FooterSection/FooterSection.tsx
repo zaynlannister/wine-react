@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const FooterSection = () => {
   return (
-    <FooterStyledList className="container">
+    <FooterStyledList data-aos="fade-right" className="container">
       <FooterList
         title="company"
         text={[

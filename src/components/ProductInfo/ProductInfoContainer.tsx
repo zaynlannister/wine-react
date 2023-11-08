@@ -39,7 +39,7 @@ const ProductInfoContainer = () => {
   }, [getOneProduct]);
   return (
     <ProfuctsInfoStyled className="container flex gap-8">
-      <div className="product__info-wine w-[50%]">
+      <div data-aos="fade-right" className="product__info-wine w-[50%]">
         <div>
           <p className="text-[20px] tracking-widest">New Wines</p>
           <p className="product__info-name custom-font text-[74px] text-[#E2B024]">
@@ -55,7 +55,10 @@ const ProductInfoContainer = () => {
           <button className="custom-button">View more</button>
         </div>
       </div>
-      <div className="product__info-box w-[50%] border-[5px] border-[#E2B024] relative">
+      <div
+        data-aos="fade-left"
+        className="product__info-box w-[50%] border-[5px] border-[#E2B024] relative"
+      >
         <a
           onClick={() => setNumber(number - 1)}
           className="absolute left-[-20px] top-[170px] custom-link hover:text-[#ffff] hover:border-[#ffff] bg-[#18191A]"

@@ -30,12 +30,15 @@ const MainContainer = () => {
     <StyledDiv className="container">
       <div className="header text-[14px] flex justify-between items-center py-4">
         <div className="header__first-block w-[33%]">
-          <p>We Ship Everywhere! Free In The Us!</p>
+          <p data-aos="fade-right">We Ship Everywhere! Free In The Us!</p>
         </div>
         <div className="header__logo w-[33%] flex justify-center">
-          <img src="/assets/img/logoIcon.svg" alt="logo" />
+          <img data-aos="fade-down" src="/assets/img/logoIcon.svg" alt="logo" />
         </div>
-        <div className="header__login w-[33%] flex justify-end">
+        <div
+          data-aos="fade-left"
+          className="header__login w-[33%] flex justify-end"
+        >
           <a className="mr-4" href="#login">
             Login
           </a>
@@ -58,19 +61,32 @@ const MainContainer = () => {
         ))}
       </div>
       <div className="main-content text-center pt-8">
-        <p className="main-content__first-text custom-font text-[24px]">
+        <p
+          data-aos="fade-down"
+          className="main-content__first-text custom-font text-[24px]"
+        >
           The Experlence of Generations
         </p>
-        <p className="main-content__second-text custom-font uppercase text-[70px]">
+        <p
+          data-aos="fade-down"
+          className="main-content__second-text custom-font uppercase text-[70px]"
+        >
           In each <span className="text-[#E2B024]">bottle</span>
         </p>
-        <p className="main-content__third-text w-[740px] mx-auto leading-7 font-[300]">
+        <p
+          data-aos="fade-down"
+          className="main-content__third-text w-[740px] mx-auto leading-7 font-[300]"
+        >
           Experience a true “American Dream” at Winehouse and visit the first
           tasting room in the United States established by a former European
           mirgant vineyard worker and his family.
         </p>
         <div className="main-content__image mt-20 w-fit mx-auto">
-          <img src="/assets/img/bottles.png" alt="bottles" />
+          <img
+            data-aos="fade-down"
+            src="/assets/img/bottles.png"
+            alt="bottles"
+          />
         </div>
       </div>
     </StyledDiv>

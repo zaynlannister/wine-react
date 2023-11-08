@@ -7,7 +7,7 @@ const productsList = [
     name: "Silver Oak",
     currentPrice: 450.0,
     prevPrice: 500.0,
-    type: "red",
+    type: "rose",
     img: "cabernet.png",
     discount: "20% off",
   },
@@ -95,7 +95,7 @@ const ProductsContainer = () => {
     setProducts(getFilteredProducts());
   }, [type]);
   return (
-    <div className="container feature">
+    <div data-aos="fade-up" className="container feature">
       <p className="text-[40px] custom-font text-center">
         Futured <span className="text-[#E2B024]">Products</span>
       </p>
@@ -117,7 +117,7 @@ const ProductsContainer = () => {
         ))}
       </ProductsStyledBox>
       {products.length > visibleProducts && (
-        <div className="text-center mt-4">
+        <div data-aos="fade-up" className="text-center mt-4">
           <a
             onClick={() => setVisibleProducts(products.length)}
             className="custom-link custom-font text-[20px]"
