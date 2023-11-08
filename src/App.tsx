@@ -3,7 +3,9 @@ import MainContainer from "./components/MainContainer/MainContainer";
 const App = () => {
   return (
     <div>
-      <MainContainer />
+      <div className="bg-[#000]">
+        <MainContainer />
+      </div>
     </div>
   );
 };

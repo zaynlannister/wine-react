@@ -12,3 +12,25 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+.custom-font {
+  font-family: "ChocolateBox", Arial, sans-serif;
+}
+
+a:hover {
+  color: #e2b024;
+}
+
+.custom-link {
+  border-bottom: 1px solid #0000;
+  transition: 100ms all;
+}
+
+.custom-link:hover {
+  border-bottom: 1px solid #e2b024;
+}
