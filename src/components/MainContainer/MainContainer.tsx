@@ -111,6 +111,12 @@ const StyledDiv = styled.div`
     }
   }
 
+  @media (max-width: 535px) {
+    .main-content__image {
+      width: 300px;
+    }
+  }
+
   @media (max-width: 490px) {
     .main-content__first-text {
       font-family: Poppins, Arial, sans-serif;

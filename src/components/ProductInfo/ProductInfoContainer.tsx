@@ -42,7 +42,7 @@ const ProductInfoContainer = () => {
       <div className="product__info-wine w-[50%]">
         <div>
           <p className="text-[20px] tracking-widest">New Wines</p>
-          <p className="custom-font text-[74px] text-[#E2B024]">
+          <p className="product__info-name custom-font text-[74px] text-[#E2B024]">
             {newProduct.name}
           </p>
           <p className="text-[36px] mb-4">Winehouse Vineyard</p>
@@ -93,6 +93,12 @@ const ProfuctsInfoStyled = styled.div`
     }
     .product__info-box {
       display: none;
+    }
+  }
+
+  @media (max-width: 535px) {
+    .product__info-name {
+      font-size: 40px;
     }
   }
 `;
